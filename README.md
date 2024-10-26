@@ -8,12 +8,12 @@ This console application implements various numerical methods used in mathematic
 - **Runge-Kutta Method**: Solving ordinary differential equations (ODEs) using the fourth-order Runge-Kutta method.
 ### Algorithm Explanation by Collaborators
 
-Jacobi Iteration method, Gauss-Seidel method, LU Factorization 
-[linearEqnPart1.md](linearEqnPart1.md)
-Non-Linear Equations
-[nonLinearEqn.md](nonLinearEqn.md)
-Runge-Kutta Method , Gauss elimination , Gauss-Jordan Elimination , Matrix inversion
-[linearEqn&differentialEqn.md](linearEqn&differentialEqn.md)
+#### Jacobi Iteration method, Gauss-Seidel method, LU Factorization
+ - [linearEqnPart1.md](linearEqnPart1.md)
+#### Non-Linear Equations
+ - [nonLinearEqn.md](nonLinearEqn.md)
+#### Runge-Kutta Method , Gauss elimination , Gauss-Jordan Elimination , Matrix inversion
+ - [linearEqn&differentialEqn.md](linearEqn&differentialEqn.md)
 ### Requirements
 
 - C++ Compiler (e.g., g++, clang++)
