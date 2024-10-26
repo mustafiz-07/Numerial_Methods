@@ -115,6 +115,10 @@ int main()
     return 0;
 }
 
+
+
+/************Function Description*************/
+
 void run_gauss_elimination()
 {
     int n;
