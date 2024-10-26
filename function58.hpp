@@ -1,61 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void run_gauss_elimination()
-{
-    int n;
-    cout << "Enter the number of variables: ";
-    cin >> n;
-
-    vector<vector<double>> A(n, vector<double>(n));
-    vector<double> B(n);
-    vector<double> X(n, 0.0);
-
-    cout << "Enter the coefficients and constants:\n"
-         << "xn  yn  zn  d";
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            cin >> A[i][j];
-        }
-        cin >> B[i];
-    }
-    gauss_elimination(A, B, X, n);
-    cout << "The solution is:\n";
-    for (int i = 0; i < n; i++)
-    {
-        cout << X[i] << "  ";
-    }
-}
-void run_gauss_jordan_elimination()
-{
-    int n;
-    cout << "Enter the number of variables: ";
-    cin >> n;
-
-    vector<vector<double>> A(n, vector<double>(n));
-    vector<double> B(n);
-    vector<double> X(n, 0.0);
-
-    cout << "Enter the coefficients and constants:\n"
-         << "xn  yn  zn  d";
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            cin >> A[i][j];
-        }
-        cin >> B[i];
-    }
-    gauss_jordan_elimination(A, B, X, n);
-    cout << "The solution is:\n";
-    for (int i = 0; i < n; i++)
-    {
-        cout << X[i] << "  ";
-    }
-}
-
 void partial_pivoting(vector<vector<double>> &A, vector<double> &B, int n)
 {
     int maxi = 0;
@@ -216,3 +161,59 @@ void rung_kutta()
     }
     cout << xn << " " << yn << endl;
 }
+
+void run_gauss_elimination()
+{
+    int n;
+    cout << "Enter the number of variables: ";
+    cin >> n;
+
+    vector<vector<double>> A(n, vector<double>(n));
+    vector<double> B(n);
+    vector<double> X(n, 0.0);
+
+    cout << "Enter the coefficients and constants:\n"
+         << "xn  yn  zn  d";
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cin >> A[i][j];
+        }
+        cin >> B[i];
+    }
+    gauss_elimination(A, B, X, n);
+    cout << "The solution is:\n";
+    for (int i = 0; i < n; i++)
+    {
+        cout << X[i] << "  ";
+    }
+}
+void run_gauss_jordan_elimination()
+{
+    int n;
+    cout << "Enter the number of variables: ";
+    cin >> n;
+
+    vector<vector<double>> A(n, vector<double>(n));
+    vector<double> B(n);
+    vector<double> X(n, 0.0);
+
+    cout << "Enter the coefficients and constants:\n"
+         << "xn  yn  zn  d";
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cin >> A[i][j];
+        }
+        cin >> B[i];
+    }
+    gauss_jordan_elimination(A, B, X, n);
+    cout << "The solution is:\n";
+    for (int i = 0; i < n; i++)
+    {
+        cout << X[i] << "  ";
+    }
+}
+
