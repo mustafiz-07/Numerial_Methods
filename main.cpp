@@ -1,83 +1,115 @@
 #include <bits/stdc++.h>
+#include "function73.hpp"
+#include "function19.hpp"
+#include "function58.hpp"
 using namespace std;
+#define endl '\n'
 
 int main()
 {
     int closeapp = 1;
     do
     {
-
+        cout << "=========================================" << endl;
         cout << "What type of equations you want to solve?" << endl;
         cout << "1. Linear Equation" << endl;
         cout << "2. Non-Linear Equation" << endl;
         cout << "3. Differential Equation" << endl;
         cout << "4. Matrix Inversion" << endl;
+        cout << "=========================================" << endl;
         int choice;
+        int methodchoice;
         cin >> choice;
         switch (choice)
         {
         case 1:
+        {
+
+            cout << "=========================================" << endl;
             cout << "Which method you want to use?" << endl;
             cout << "1. Jacobi iterative method" << endl;
             cout << "2. Gauss-Seidel iterative method" << endl;
             cout << "3. Gauss elimination" << endl;
             cout << "4. Gauss-Jordan elimination" << endl;
             cout << "5. LU factorization" << endl;
-            int methodchoice;
+            cout << "=========================================" << endl;
             cin >> methodchoice;
-            system("cls");
             switch (methodchoice)
             {
             case 1:
-                // runjacobiiteration();
+                system("cls");
+                runjacobiiteration();
                 break;
             case 2:
-                // rungausseidel();
+                system("cls");
+                rungausseidel();
                 break;
             case 3:
+                system("cls");
                 run_gauss_elimination();
                 break;
             case 4:
+                system("cls");
                 run_gauss_jordan_elimination();
                 break;
             case 5:
-                // run_LU();
+                system("cls");
+                LU_factorization();
                 break;
             default:
                 break;
             }
             break;
-
+        }
         case 2:
+        {
+            cout << "=========================================" << endl;
             cout << "Which method you want to use?" << endl;
-            cout << "1. Bisection method" << endl;
-            cout << "2. False position method" << endl;
-            cout << "3. Newton Raphson method" << endl;
-            cout << "4. Secant Method" << endl;
-            int method;
-            cin >> method;
-            system("cls");
-            if (method == 1)
+            cout << "1. Bi-section method " << endl;
+            cout << "2. False position method " << endl;
+            cout << "3. Secant method " << endl;
+            cout << "4. Newton-Raphson method " << endl;
+            cout << "=========================================" << endl;
+            int methodchoice;
+            cin >> methodchoice;
+            switch (methodchoice)
             {
-                // bisection_method();
+            case 1:
+                system("cls");
+                bisection_method();
+                break;
+            case 2:
+                system("cls");
+                false_position_method();
+                break;
+            case 3:
+                system("cls");
+                secant_method();
+                break;
+            case 4:
+                system("cls");
+                newton_raphson_method();
+                break;
+            default:
+                break;
             }
-            else if (method == 2)
-            {
-                // false_position_method();
-            }
-            else if (method == 3)
-            {
-                // newton_raphson_method();
-            }
-            else
-            {
-                // secant_method();
-            }
-            break;
+        }
         case 3:
-            system("cls");
-            rung_kutta();
-            break;
+        {
+
+            cout << "Which method you want to use?" << endl;
+            cout << "1. Runge-Kutta method " << endl;
+            cin >> choice;
+            switch (choice)
+            {
+            case 1:
+                system("cls");
+                rung_kutta();
+                break;
+            default:
+                break;
+            }
+        }
         case 4:
             system("cls");
             Inverse_matrix();
@@ -95,5 +127,3 @@ int main()
     } while (closeapp);
     return 0;
 }
-
-
