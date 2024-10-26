@@ -97,8 +97,10 @@ int main()
         case 3:
         {
 
+        cout << "=========================================" << endl;
             cout << "Which method you want to use?" << endl;
             cout << "1. Runge-Kutta method " << endl;
+        cout << "=========================================" << endl;
             cin >> choice;
             switch (choice)
             {
